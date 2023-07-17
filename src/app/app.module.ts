@@ -22,6 +22,12 @@ import { TecnicoCreateComponent } from './components/tecnico/tecnico-create/tecn
 import { TecnicoUpdateComponent } from './components/tecnico/tecnico-update/tecnico-update.component';
 import { TecnicoDeletComponent } from './components/tecnico/tecnico-delet/tecnico-delet.component';
 
+import { ClienteListComponent } from './components/cliente/cliente-list/cliente-list.component';
+import { ClienteCreateComponent } from './components/cliente/cliente-create/cliente-create.component';
+import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
+import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
+
+
 //componentes do material
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
@@ -37,6 +43,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 
 import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
 import { NgxMaskModule } from 'ngx-mask';
+import { ChamadoListComponent } from './components/chamados/chamado-list/chamado-list.component';
 
 
 @NgModule({
@@ -49,7 +56,12 @@ import { NgxMaskModule } from 'ngx-mask';
     LoginComponent,
     TecnicoCreateComponent,
     TecnicoUpdateComponent,
-    TecnicoDeletComponent
+    TecnicoDeletComponent,
+    ClienteListComponent,
+    ClienteCreateComponent,
+    ClienteUpdateComponent,
+    ClienteDeleteComponent,
+    ChamadoListComponent
   ],
   imports: [
     BrowserModule,

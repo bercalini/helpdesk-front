@@ -50,10 +50,8 @@ export class TecnicoCreateComponent implements OnInit {
   addPerfil(perfil: any): void {
     if(this.tecnico.perfis.includes(perfil)) {
       this.tecnico.perfis.splice(this.tecnico.perfis.indexOf(perfil), 1);
-      console.log(this.tecnico.perfis);
     } else {
       this.tecnico.perfis.push(perfil);
-      console.log(this.tecnico.perfis);
     }
   }
 

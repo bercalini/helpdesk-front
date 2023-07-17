@@ -1,0 +1,42 @@
+<div class="container mat-elevation-z8">
+    <form class="form">
+        <h1 class="fullWidth">Cadastrar Tecnico</h1>
+
+        <section class="section">
+            <mat-checkbox (click)="addPerfil(0)" class="margin" color="primary">Admin</mat-checkbox>
+            <mat-checkbox (click)="addPerfil(1)" [checked]="true" class="margin" color="primary">Cliente</mat-checkbox>
+            <mat-checkbox (click)="addPerfil(2)" class="margin" color="primary">Tecnico</mat-checkbox>
+        </section>
+        <p>
+            <mat-form-field appearance="fill" class="fullWidth">
+              <mat-label>Nome</mat-label>
+              <input matInput placeholder="Digite seu nome" [formControl]="nome" required [(ngModel)]="tecnico.nome" name="nome">
+              <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="fill" class="fullWidth">
+              <mat-label>CPF</mat-label>
+              <input matInput placeholder="Ex 000.000.00-00" [formControl]="cpf" required mask="000.000.000-00" [(ngModel)]="tecnico.cpf" name="cpf">
+              <mat-icon matSuffix>pin</mat-icon>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="fill" class="fullWidth">
+              <mat-label>E-mail</mat-label>
+              <input matInput placeholder="Ex @hotmail.com" [formControl]="email" required [(ngModel)]="tecnico.email" name="email">
+              <mat-icon matSuffix>email</mat-icon>
+            </mat-form-field>
+        </p>
+        <p>
+            <mat-form-field appearance="fill" class="fullWidth">
+              <mat-label>Senha</mat-label>
+              <input type="password" matInput placeholder="Digite sua senha" [formControl]="senha" required="true" [(ngModel)]="tecnico.senha" name="senha">
+              <mat-icon matSuffix>password</mat-icon>
+            </mat-form-field>
+        </p>
+
+        <button (click)="create()" [disabled]="!validaCampos()" mat-flat-button color="primary" class="fullWidth mat-elevation-z4">Cadastrar</button>
+        <button routerLink="../" mat-stroked-button color="warn" class="fullWidth mat-elevation-z4">Cancelar</button>
+    </form>
+</div>

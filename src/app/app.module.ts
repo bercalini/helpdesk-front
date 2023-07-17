@@ -18,6 +18,10 @@ import { HeaderComponent } from './components/header/header.component';
 import { TecnicoListComponent } from './components/tecnico/tecnico-list/tecnico-list.component';
 import { LoginComponent } from './components/login/login.component';
 
+import { TecnicoCreateComponent } from './components/tecnico/tecnico-create/tecnico-create.component';
+import { TecnicoUpdateComponent } from './components/tecnico/tecnico-update/tecnico-update.component';
+import { TecnicoDeletComponent } from './components/tecnico/tecnico-delet/tecnico-delet.component';
+
 //componentes do material
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatListModule} from '@angular/material/list';
@@ -28,9 +32,11 @@ import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {ToastrModule} from 'ngx-toastr';
-
+import {MatCheckboxModule} from '@angular/material/checkbox';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
+import { NgxMaskModule } from 'ngx-mask';
 
 
 @NgModule({
@@ -40,7 +46,10 @@ import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
     HomeComponent,
     HeaderComponent,
     TecnicoListComponent,
-    LoginComponent
+    LoginComponent,
+    TecnicoCreateComponent,
+    TecnicoUpdateComponent,
+    TecnicoDeletComponent
   ],
   imports: [
     BrowserModule,
@@ -60,12 +69,15 @@ import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
     MatPaginatorModule,
     MatInputModule,
     MatButtonModule,
+    MatCheckboxModule,
+    MatTooltipModule,
     
     ToastrModule.forRoot({
       timeOut: 4000,
       closeButton: true,
       progressBar: true
-    })
+    }),
+    NgxMaskModule.forRoot()
   ],
   providers: [AuthInterceptorProvider],
   bootstrap: [AppComponent]

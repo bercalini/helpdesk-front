@@ -1,0 +1,26 @@
+.container {
+    width: 45%;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.full-width {
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+}
+
+.status-prioridades {
+    display: flex;
+    justify-content: space-between;
+}
+
+.status-prioridades mat-form-field {
+    width: 49%;
+}
+button{
+    margin-bottom: 0.5rem;
+}

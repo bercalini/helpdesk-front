@@ -27,6 +27,9 @@ import { ClienteCreateComponent } from './components/cliente/cliente-create/clie
 import { ClienteUpdateComponent } from './components/cliente/cliente-update/cliente-update.component';
 import { ClienteDeleteComponent } from './components/cliente/cliente-delete/cliente-delete.component';
 
+import { ChamadoListComponent } from './components/chamados/chamado-list/chamado-list.component';
+import { ChamadoCreateComponent } from './components/chamados/chamado-create/chamado-create.component';
+import { ChamadoUpdateComponent } from './components/chamados/chamado-update/chamado-update.component';
 
 //componentes do material
 import {MatSidenavModule} from '@angular/material/sidenav';
@@ -40,10 +43,12 @@ import {MatButtonModule} from '@angular/material/button';
 import {ToastrModule} from 'ngx-toastr';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import {MatRadioModule} from '@angular/material/radio';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import {MatSelectModule} from '@angular/material/select';
 
 import { AuthInterceptorProvider } from './interceptors/auth.interceptor';
 import { NgxMaskModule } from 'ngx-mask';
-import { ChamadoListComponent } from './components/chamados/chamado-list/chamado-list.component';
 
 
 @NgModule({
@@ -61,7 +66,9 @@ import { ChamadoListComponent } from './components/chamados/chamado-list/chamado
     ClienteCreateComponent,
     ClienteUpdateComponent,
     ClienteDeleteComponent,
-    ChamadoListComponent
+    ChamadoListComponent,
+    ChamadoCreateComponent,
+    ChamadoUpdateComponent
   ],
   imports: [
     BrowserModule,
@@ -83,6 +90,9 @@ import { ChamadoListComponent } from './components/chamados/chamado-list/chamado
     MatButtonModule,
     MatCheckboxModule,
     MatTooltipModule,
+    MatRadioModule,
+    MatFormFieldModule,
+    MatSelectModule,
     
     ToastrModule.forRoot({
       timeOut: 4000,
